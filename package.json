@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "cabrite-cli",
   "version": "1.0.0",
   "description": "demo",
   "main": "index.js",
@@ -21,7 +21,8 @@
     "product": "http://testdev.joyomm.com"
   },
   "keywords": [
-    "demo"
+    "framework",
+    "react"
   ],
   "author": "karzan",
   "license": "ISC",
