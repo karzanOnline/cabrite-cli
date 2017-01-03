@@ -1,0 +1,13 @@
+#ignore packages installed by npm
+/node_modules
+
+#ignore build packed by webpack
+#/build
+
+#ignore build packed by happypack
+.happypack/
+
+#ignore build packed by idea
+.idea/
+
+dist
