@@ -10,8 +10,11 @@ const vendors = [
     'react-dom',
     'react-router',
     'antd',
-    'antd/dist/antd.css'
+    'antd/dist/antd.less',
+    'whatwg-fetch'
 ];
+
+const theme = require('./theme.js');
 
 module.exports = {
     entry: {
@@ -24,8 +27,12 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.css/,
-            loader:ExtractTextPlugin.extract("style-loader", "css-loader?-url")
+            test: /\.less/,
+            loader:ExtractTextPlugin.extract(
+                'css?sourceMap!' +
+                'postcss!' +
+                `less-loader?{"sourceMap":true,"modifyVars":${JSON.stringify(theme)}}`
+            )
         }]
     },
     plugins: [

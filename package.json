@@ -1,28 +1,30 @@
 {
-  "name": "cabrite-cli",
+  "name": "demo",
   "version": "1.0.0",
   "description": "demo",
   "main": "index.js",
+  "engines":"7.3.0",
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --inline --progress --colors --hot --port 80",
+    "dev": "node --harmony-async-await env dev&webpack-dev-server --harmony-async-await --devtool eval --inline --progress --colors --hot --port 8889",
     "beta": "webpack --config webpack.beta.config.js",
     "openbeta": "webpack --config webpack.openbeta.config.js",
     "product": "webpack --config webpack.product.config.js",
     "test": "mocha",
     "dll": "webpack --config webpack.dll.config.js"
   },
+  "theme": "./theme.js",
   "repository": {
     "type": "git",
     "url": "http://gitdb.joyomm.com/static/demo.git"
   },
   "domain": {
-    "dev": "http://testdev.joyomm.com",
+    "dev": "",
     "test": "http://testdev.joyomm.com",
-    "product": "http://testdev.joyomm.com"
+    "product": "http://testdev.joyomm.com",
+    "self": ""
   },
   "keywords": [
-    "framework",
-    "react"
+    "demo"
   ],
   "author": "karzan",
   "license": "ISC",
@@ -64,13 +66,23 @@
   "dependencies": {
     "@types/react": "^0.14.55",
     "@types/react-dom": "^0.14.19",
-    "antd": "^2.5.3",
+    "@types/react-router": "^2.0.41",
+    "@types/redux": "^3.6.0",
+    "@types/redux-immutable": "^3.0.31",
+    "antd": "^2.6.0",
     "assets-webpack-plugin": "^3.5.0",
     "classnames": "^2.2.5",
     "extract-text-webpack-plugin": "^1.0.1",
+    "immutable": "^3.8.1",
     "less-loader": "^2.2.3",
+    "postcss-loader": "^1.2.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "^3.0.0"
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "redux-immutable": "^3.0.9",
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^2.0.1"
   }
 }

@@ -3,7 +3,7 @@
  */
 
 (function () {
-    var _domain='http://testdev.joyomm.com';
+    var _domain='';
 
     window.load_page = function (path) {
         var script = document.createElement('script');

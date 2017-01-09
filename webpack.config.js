@@ -1,7 +1,6 @@
 /**
  * Created by caozheng on 2016/12/22.
  */
- require('./env')('dev');
 const path = require('path');
 const node_modules = path.resolve(__dirname, 'node_modules');
 const webpack = require('webpack');
@@ -19,6 +18,9 @@ let config = {
         path: './',
         filename: 'dist/js/[name].js',
         chunkFilename: 'chunk/[chunkhash:8].chunk.js',
+    },
+    resolve: {
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
     },
     module:{
         loaders:[

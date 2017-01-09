@@ -4,5 +4,5 @@
 var path = require("path");
 module.exports = {
     "domain": "./website/domain.js",
-    "demoTSX": "./src/js/demoTsx.tsx"
+    "index": "./src/index.tsx"
 };
